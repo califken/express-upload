@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Express Upload</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+</head>
+
+<body>
+    <div class="container" id="main-container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center">
+                <div class="card text-center mb-4" id="dropzone">
+                    <div class="card-header">
+                        Multiple File Upload with Progress Bar for Node.js and Express
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Express Upload</h4>
+                        <p class="card-text">
+                            with Express, Multer, Dropzone and Bootstrap
+                        </p>
+                        <br />
+                        <form action="/uploads" id="trackform" method="post" enctype="multipart/form-data">
+                            <div class="md-form input-group mb-3">
+                                <input multiple type="file" name="file" class="form-control" id="filedrop" />
+                                <div class="input-group-append">
+                                    <input type="submit" class="btn btn-md btn-elegant m-0 px-3" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-muted progress-footer">
+                        <div class="progress">
+                            <div id="progress" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center">
+                <div class="list-group" id="uploaded-files-list">
+                    <div class="list-group-item list-group-item-light">
+                        Uploaded Files
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/dropzone.js"></script>
+    <script src="/javascripts/express-upload.js"></script>
+</body>
+
+</html>
